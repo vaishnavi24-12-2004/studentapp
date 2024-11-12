@@ -157,8 +157,8 @@
     <!-- JavaScript for form validation -->
     <script>
       function validateUsername() {
-        const username = document.getElementById("username").value;
-        const usernamePattern = /^[a-zA-Z\-]+$/;
+        var username = document.getElementById("username").value;
+        var usernamePattern = /^[a-zA-Z\-]+$/;
 
         if (!usernamePattern.test(username)) {
           alert("Only alphabets are allowed in the username.");
@@ -169,8 +169,8 @@
       }
 
       function validatePassword() {
-        const password = document.getElementById("password").value;
-        const passwordPattern =
+        var password = document.getElementById("password").value;
+        var passwordPattern =
           /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])[a-zA-Z0-9~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]{10,16}$/;
 
         if (!passwordPattern.test(password)) {
@@ -185,8 +185,8 @@
 
       function submitForm(event) {
         event.preventDefault();
-        const isUsernameValid = validateUsername();
-        const isPasswordValid = validatePassword();
+        var isUsernameValid = validateUsername();
+        var isPasswordValid = validatePassword();
 
         if (isUsernameValid && isPasswordValid) {
           alert("Login successful!");
